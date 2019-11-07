@@ -5,8 +5,17 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.2.3/firebase-app.js"></script>
 
-<ion-content>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.2.3/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<ion-content>    <!--de aqui comienza la programcion-->
     <ion-card class="welcome-card">
       <img src="/assets/img/halcon.png" alt="" />
       <ion-card-header>
@@ -23,17 +32,17 @@
   <br>
   <br> 
    <ion-label position="floating"> USER</ion-label>
-   <ion-input type="text" name="USER"></ion-input>
+   <ion-input type="text" [(ngModel)]="USER" name="USER"></ion-input>
 </ion-item>
 
 <ion-item> 
-  <ion-label position="floating"> PASWOARD</ion-label>
-  <ion-input type="text" name="PASWOARD"></ion-input>
+  <ion-label position="floating"> PASSWORD</ion-label>
+  <ion-input [(ngModel)]="PASSWORD" type="text"  name="PASSWORD"></ion-input>
 </ion-item>
 <br>
 <br>
 <br>
-<ion-button color="secondary" expand="block">Entrar</ion-button>
+<ion-button (click)= "OnSubmittab1()"color="secondary" expand="block">Entrar</ion-button>
 </ion-content>
     <!--<ion-list lines="none">
       <ion-list-header>
