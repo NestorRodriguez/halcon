@@ -15,35 +15,40 @@
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
 
-<ion-content>    <!--de aqui comienza la programcion-->
+<ion-content>
+    <br><br>
+    <!--de aqui comienza la programcion-->
     <ion-card class="welcome-card">
-      <img src="/assets/img/halcon.png" alt="" />
-      <ion-card-header>
-        <!--<ion-card-subtitle>Get Started</ion-card-subtitle>-->
-        <!--<ion-card-title>Welcome to Ionic</ion-card-title>-->
-      </ion-card-header>
-      <!--<ion-card-content>
+        <img src="/assets/img/halcon.png" alt="" />
+        <ion-card-header>
+            <!--<ion-card-subtitle>Get Started</ion-card-subtitle>-->
+            <!--<ion-card-title>Welcome to Ionic</ion-card-title>-->
+        </ion-card-header>
+        <!--<ion-card-content>
         <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
       </ion-card-content>-->
     </ion-card>
 
-<ion-content padding>
-<ion-item>
-  <br>
-  <br> 
-   <ion-label position="floating"> USER</ion-label>
-   <ion-input type="text" [(ngModel)]="USER" name="USER"></ion-input>
-</ion-item>
+    <ion-content padding>
+        <ion-item>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <ion-label position="floating"> USER</ion-label>
+            <ion-input type="text" [(ngModel)]="USER" name="USER"></ion-input>
+        </ion-item>
 
-<ion-item> 
-  <ion-label position="floating"> PASSWORD</ion-label>
-  <ion-input [(ngModel)]="PASSWORD" type="text"  name="PASSWORD"></ion-input>
-</ion-item>
-<br>
-<br>
-<br>
-<ion-button (click)= "OnSubmittab1()"color="secondary" expand="block">Entrar</ion-button>
-</ion-content>
+        <ion-item>
+            <ion-label position="floating"> PASSWORD</ion-label>
+            <ion-input [(ngModel)]="PASSWORD" type="password" name="PASSWORD"></ion-input>
+        </ion-item>
+        <br>
+        <br>
+        <br>
+        <ion-button (click)="OnSubmittab1()" color="secondary" expand="block">Entrar</ion-button>
+    </ion-content>
     <!--<ion-list lines="none">
       <ion-list-header>
         <ion-label>Resources</ion-label>
