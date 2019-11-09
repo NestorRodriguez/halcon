@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+  
+  <ion-toolbar color="primary">
+    
+    <ion-title text alig="center" size="small">Informacion <br>Del<br> Vehiculo</ion-title>
   </ion-toolbar>
+  
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+    <ion-item>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> 
+         <ion-label position="floating"> PLACA</ion-label>
+         <ion-input type="text"  name="PLACA"></ion-input>
+      </ion-item>
+      <ion-item>
+          <br>
+          <br> 
+           <ion-label position="floating"> USUARIO</ion-label>
+           <ion-input type="text"  name="USUARIO"></ion-input>
+        </ion-item>
+
+      <ion-item> 
+        <ion-label position="floating"> VEHICULO</ion-label>
+        <ion-input  type="text"  name="VEHICULO"></ion-input>
+      </ion-item>
+      <br>
+      <br>
+      <br>
+      <ion-button (click)= "OnSubmittab1()"color="secondary" expand="block">Ingresar a Mapa</ion-button>
 
 </ion-content>
