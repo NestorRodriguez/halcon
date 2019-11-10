@@ -11,12 +11,17 @@ import { AppComponent } from './app.component';
 import {firebaseConfig } from "../environments/environment";  //revisar esta linea
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
-
+//Storage
+import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-  AngularFireModule.initializeApp(firebaseConfig ),AngularFireAuthModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, 
+  AngularFireModule.initializeApp(firebaseConfig ),AngularFireAuthModule, IonicStorageModule.forRoot({
+    name: 'coordenadas',
+driverOrder: ['indexeddb']
+  })
+],
   providers: [
     StatusBar,
     SplashScreen,

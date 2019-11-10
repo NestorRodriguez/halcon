@@ -4,6 +4,19 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+    <agm-map (mapClick)="agregarMarcador($event)" [latitude]="lat" [longitude]="lng" [zoom]='16'>
+        <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng" iconUrl="assets/carreras.png" width="50%">
+            <agm-info-window>
+                <strong>{{marcador.title}}</strong>
+                <p>{{marcador.description}}</p>
+            </agm-info-window>
+        </agm-marker>
+        <agm-polyline *ngIf="polyline" strokeColor="red">
+            <agm-polyline-point [latitude]="latA" [longitude]="lngA">
+            </agm-polyline-point>
+            <agm-polyline-point [latitude]="latB" [longitude]="lngB">
+            </agm-polyline-point>
+        </agm-polyline>
+    </agm-map>
 </ion-content>
