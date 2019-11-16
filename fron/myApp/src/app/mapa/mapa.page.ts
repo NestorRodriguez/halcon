@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Marcador } from '../class/marcador';
-import { Storage } from '@ionic/storage';
+// import { Storage } from '@ionic/storage';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @Component({

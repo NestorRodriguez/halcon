@@ -13,6 +13,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 // Storage
 import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,8 +23,9 @@ import { IonicStorageModule } from '@ionic/storage';
   AngularFireModule.initializeApp(firebaseConfig ),
   AngularFireAuthModule,
   IonicStorageModule.forRoot({
+    // USER : 'nestor@inger.com',
     name: 'coordenadas',
-driverOrder: ['indexeddb']
+    driverOrder: ['indexeddb']
   })
 ],
   providers: [
