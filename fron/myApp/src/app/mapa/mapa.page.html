@@ -5,18 +5,20 @@
 </ion-header>
 
 <ion-content padding>
-    <agm-map (mapClick)="agregarMarcador($event)" [latitude]="lat" [longitude]="lng" [zoom]='16'>
-        <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng" iconUrl="assets/carreras.png" width="50%">
-            <agm-info-window>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]='16'>
+        <!-- <agm-map (mapClick)="agregarMarcador($event)" [latitude]="lat" [longitude]="lng" [zoom]='16'> -->
+        <!-- <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng" iconUrl="assets/carreras.png" width="50%"> -->
+        <agm-marker [latitude]="lat" [longitude]="lng" iconUrl="../../assets/icon/carreras.png" width="50%">
+            <!-- <agm-info-window>
                 <strong>{{marcador.title}}</strong>
                 <p>{{marcador.description}}</p>
-            </agm-info-window>
+            </agm-info-window> -->
         </agm-marker>
-        <agm-polyline *ngIf="polyline" strokeColor="red">
+        <!-- <agm-polyline *ngIf="polyline" strokeColor="red">
             <agm-polyline-point [latitude]="latA" [longitude]="lngA">
             </agm-polyline-point>
             <agm-polyline-point [latitude]="latB" [longitude]="lngB">
             </agm-polyline-point>
-        </agm-polyline>
+        </agm-polyline> -->
     </agm-map>
 </ion-content>

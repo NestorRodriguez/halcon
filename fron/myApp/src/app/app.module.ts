@@ -8,16 +8,20 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {firebaseConfig } from "../environments/environment";  //revisar esta linea
-import { AngularFireModule } from "@angular/fire";
-import { AngularFireAuthModule } from "@angular/fire/auth";
-//Storage
+import {firebaseConfig } from '../environments/environment';  // revisar esta linea
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+// Storage
 import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, 
-  AngularFireModule.initializeApp(firebaseConfig ),AngularFireAuthModule, IonicStorageModule.forRoot({
+  imports: [BrowserModule,
+  IonicModule.forRoot(),
+  AppRoutingModule,
+  AngularFireModule.initializeApp(firebaseConfig ),
+  AngularFireAuthModule,
+  IonicStorageModule.forRoot({
     name: 'coordenadas',
 driverOrder: ['indexeddb']
   })
