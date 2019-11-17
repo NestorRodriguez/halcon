@@ -11,9 +11,13 @@ import {Storage} from '@ionic/storage';
 export class Tab1Page implements OnInit {
   USER: string;
   PASSWORD: string;
+  usuario = { 
+    user: 'Fredy Halcon',
+    password: 'Cuidamos'
+  };
 
   constructor(private authService: AuthService, public router: Router,
-      // private Storage: Storage
+       private Storage: Storage
     ) {
 
   }
@@ -24,15 +28,22 @@ export class Tab1Page implements OnInit {
 
       //  }
     ngOnInit() {
-      // this.storage.get('login').then((val) => {
-      //   console.log('value is' + val);
-      //   });
+      this.Storage.get('User').then((val) => {
+         console.log('value is' + val);
+         if(val != null)
+         {
+           this.router.navigate(['/tabs/tab2']);
+         }
+        });
 
     }
 
 
-  OnSubmittab1() {
-     this.authService.tab1(this.USER, this.PASSWORD).then(res => {
+    OnSubmittab1() {
+    console.log("Valor usuario");
+    console.log(this.usuario);
+    this.Storage.set('User', this.usuario);
+    this.authService.tab1(this.USER, this.PASSWORD).then(res => {
         this.router.navigate(['/home']);
      }).catch(err => alert('los datos son incorrectos O Usuario no existe'));
   }

@@ -24,7 +24,7 @@ import { IonicStorageModule } from '@ionic/storage';
   AngularFireAuthModule,
   IonicStorageModule.forRoot({
     // USER : 'nestor@inger.com',
-    name: 'coordenadas',
+    name: 'Halcon',
     driverOrder: ['indexeddb']
   })
 ],
