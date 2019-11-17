@@ -5,6 +5,8 @@ const routes: Routes = [
   {path: '', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)},
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'mapa', loadChildren: './mapa/mapa.module#MapaPageModule' },
+  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule'},
+
 
 ];
 @NgModule({
