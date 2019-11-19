@@ -11,13 +11,14 @@ import {Storage} from '@ionic/storage';
 export class Tab1Page implements OnInit {
   USER: string;
   PASSWORD: string;
-  usuario = { 
+  usuario = {
     user: 'Fredy Halcon',
     password: 'Cuidamos'
   };
 
   constructor(private authService: AuthService, public router: Router,
-       private Storage: Storage
+              // tslint:disable-next-line: no-shadowed-variable
+              private Storage: Storage
     ) {
 
   }
@@ -28,19 +29,30 @@ export class Tab1Page implements OnInit {
 
       //  }
     ngOnInit() {
-      this.Storage.get('User').then((val) => {
+      this.Storage.get('User').then((val: string) => {
          console.log('value is' + val);
-         if(val != null)
-         {
+         if (val != null) {
            this.router.navigate(['/tabs/tab2']);
          }
         });
+      this.Storage.get('USER').then((val: string) => {
+          console.log('value is' + val);
+          if (val != null) {
+            this.router.navigate(['/tabs/tab2']);
+          }
+         });
+      this.Storage.get('PASSWORD').then((val: string) => {
+          console.log('value is' + val);
+          if (val != null) {
+            this.router.navigate(['/tabs/tab2']);
+          }
+         });
 
     }
 
 
     OnSubmittab1() {
-    console.log("Valor usuario");
+    console.log('Valor usuario');
     console.log(this.usuario);
     this.Storage.set('User', this.usuario);
     this.authService.tab1(this.USER, this.PASSWORD).then(res => {
