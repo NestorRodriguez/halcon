@@ -11,9 +11,17 @@ import {Storage} from '@ionic/storage';
 export class Tab1Page implements OnInit {
   USER: string;
   PASSWORD: string;
+ 
+  USER1 = {
+    USER: 'USER'
+  };
+
+  PASWORD1 = {
+    PASSWORD: 'PASSWORD'
+  };
   usuario = {
-    user: 'Fredy Halcon',
-    password: 'Cuidamos'
+    USER: 'USER',
+    PASSWORD: 'PASSWORD'
   };
 
   constructor(private authService: AuthService, public router: Router,
@@ -32,7 +40,7 @@ export class Tab1Page implements OnInit {
       this.Storage.get('User').then((val: string) => {
          console.log('value is' + val);
          if (val != null) {
-           this.router.navigate(['/tabs/tab2']);
+           this.router.navigate(['/tabs/tab1']);
          }
         });
       this.Storage.get('USER').then((val: string) => {
@@ -58,6 +66,22 @@ export class Tab1Page implements OnInit {
     this.authService.tab1(this.USER, this.PASSWORD).then(res => {
         this.router.navigate(['/home']);
      }).catch(err => alert('los datos son incorrectos O Usuario no existe'));
+
+    console.log('Valor USER1');
+    console.log(this.USER1);
+    this.Storage.set('USER', this.USER1);
+    this.authService.tab1(this.USER, this.PASSWORD).then(res => {
+        this.router.navigate(['/home']);
+     }).catch(err => alert('los datos son incorrectos O Usuario no existe'));
+
+    console.log('Valor PASWORD1');
+    console.log(this.PASWORD1);
+    this.Storage.set('PASWORD', this.PASWORD1);
+    this.authService.tab1(this.USER, this.PASSWORD).then(res => {
+        this.router.navigate(['/home']);
+     }).catch(err => alert('los datos son incorrectos O Usuario no existe'));
+
+
   }
 
 }
