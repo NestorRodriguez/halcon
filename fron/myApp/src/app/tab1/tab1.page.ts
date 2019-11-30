@@ -46,13 +46,13 @@ export class Tab1Page implements OnInit {
       this.Storage.get('USER').then((val: string) => {
           console.log('value is' + val);
           if (val != null) {
-            this.router.navigate(['/tabs/tab2']);
+            this.router.navigate(['/tabs/tab1']);
           }
          });
       this.Storage.get('PASSWORD').then((val: string) => {
           console.log('value is' + val);
           if (val != null) {
-            this.router.navigate(['/tabs/tab2']);
+            this.router.navigate(['/tabs/tab1']);
           }
          });
 
