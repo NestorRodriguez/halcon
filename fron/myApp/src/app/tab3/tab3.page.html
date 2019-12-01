@@ -1,9 +1,42 @@
+
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
+  <ion-toolbar color="primary">
+      <ion-title><H1>USUARIO</H1></ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <!--de aqui comienza la programcion-->
+ <ion-card class="card">
+     <img src="/assets/img/halcon.png" alt="" />
+     <ion-card-header>
+         <!--<ion-card-subtitle>Get Started</ion-card-subtitle>-->
+         <!--<ion-card-title>Welcome to Ionic</ion-card-title>-->
+     </ion-card-header>
+     <!--<ion-card-content>
+     <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+   </ion-card-content>-->
+ </ion-card>
 
-<ion-content></ion-content>
+ <ion-content padding>
+     <ion-item>
+         
+         <ion-label position="floating"> USER</ion-label>
+         <ion-input type="text" [(ngModel)]="USER" name="USER"></ion-input>
+     </ion-item>
+
+     <ion-item>
+         <ion-label position="floating"> PASSWORD</ion-label>
+         <ion-input [(ngModel)]="PASSWORD" type="password" name="PASSWORD"></ion-input>
+     </ion-item>
+     <br>
+     <br>
+     <ion-button (click)="OnSubmittab1()" color="primary" expand="block">Entrar</ion-button>
+     <div class="back">
+      <ion-button   color="light"  routerLink="/tabs/tab2" >
+      <ion-icon name="arrow-round-back"></ion-icon>
+     </ion-button>
+     </div>
+     
+
+     
+ </ion-content>

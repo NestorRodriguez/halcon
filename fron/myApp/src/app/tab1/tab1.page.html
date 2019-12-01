@@ -15,6 +15,11 @@
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
 
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-title><H1>ADMINISTRADOR</H1></ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
      <div class="back">
     <ion-button   color="light"  routerLink="/tabs/tab2" >
@@ -23,7 +28,7 @@
 </div>
    <!--de aqui comienza la programcion-->
     <ion-card class="welcome-card">
-        <img src="/assets/img/halcon.png" alt="" />
+        <img src="/assets/img/perfil-4.png" alt="" />
         <ion-card-header>
             <!--<ion-card-subtitle>Get Started</ion-card-subtitle>-->
             <!--<ion-card-title>Welcome to Ionic</ion-card-title>-->
@@ -46,7 +51,7 @@
         </ion-item>
         <br>
         <br>
-        <ion-button (click)="OnSubmittab1()" color="secondary" expand="block">Entrar</ion-button>
+        <ion-button (click)="OnSubmittab1()" color="primary" expand="block">Entrar</ion-button>
         <br>
         <div class="center">
             <ion-button color="medium" fill="outline" routerLink="/registro">
