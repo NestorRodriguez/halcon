@@ -64,21 +64,21 @@ export class Tab3Page implements OnInit {
     console.log(this.usuario);
     this.Storage.set('User', this.usuario);
     this.authService.tab1(this.USER, this.PASSWORD).then(res => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/home2']);
      }).catch(err => alert('los datos son incorrectos O Usuario no existe'));
 
     console.log('Valor USER1');
     console.log(this.USER1);
     this.Storage.set('USER', this.USER1);
     this.authService.tab1(this.USER, this.PASSWORD).then(res => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/home2']);
      }).catch(err => alert('los datos son incorrectos O Usuario no existe'));
 
     console.log('Valor PASWORD1');
     console.log(this.PASWORD1);
     this.Storage.set('PASWORD', this.PASWORD1);
     this.authService.tab1(this.USER, this.PASSWORD).then(res => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/home2']);
      }).catch(err => alert('los datos son incorrectos O Usuario no existe'));
 
 

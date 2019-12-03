@@ -31,6 +31,7 @@
     "@mw-angular/core": "^1.2.0",
     "core-js": "^2.5.4",
     "firebase": "^7.2.3",
+    "native": "^0.3.3",
     "natives": "^1.1.6",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
