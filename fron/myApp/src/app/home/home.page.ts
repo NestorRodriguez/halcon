@@ -36,19 +36,19 @@ export class HomePage implements OnInit {
       this.Storage.get('Imei').then((val: string) => {
          console.log('value is' + val);
          if (val != null) {
-           this.router.navigate(['/home2']);
+           this.router.navigate(['/home']);
          }
         });
       this.Storage.get('IMEI').then((val: string) => {
           console.log('value is' + val);
           if (val != null) {
-            this.router.navigate(['/home2']);
+            this.router.navigate(['/home']);
           }
          });
       this.Storage.get('CIUDAD').then((val: string) => {
           console.log('value is' + val);
           if (val != null) {
-            this.router.navigate(['/home2']);
+            this.router.navigate(['/home']);
           }
          });
 

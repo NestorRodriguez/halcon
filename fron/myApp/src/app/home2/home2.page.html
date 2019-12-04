@@ -1,8 +1,16 @@
+<script src="/__/firebase/7.2.3/firebase-app.js"></script>
+
+
+<script src="/__/firebase/7.2.3/firebase-analytics.js"></script>
+
+
+<script src="/__/firebase/init.js"></script>
+
 <ion-header>
 
     <ion-toolbar color="primary">
 
-        <ion-title class="cent" text alig="center" size="small">
+        <ion-title class="centro" text alig="center" size="small">
             <h1>Monitoreo <br>De<br> Dispsositivos</h1>
         </ion-title>
     </ion-toolbar>
@@ -22,19 +30,19 @@
         <br>
         <br>
         <ion-label position="floating"> IMEI</ion-label>
-        <ion-input type="text" name="IMEI"></ion-input>
+        <ion-input type="text" [(ngModel)]="IMEI" name="IMEI"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label position="floating"> CIUDAD</ion-label>
-        <ion-input type="text" name="CIUDAD"></ion-input>
+        <ion-input type="text" [(ngModel)]="CIUDAD" name="CIUDAD"></ion-input>
     </ion-item>
     <br>
     <br>
     <br>
-    <ion-button color="secondary" expand="block">Ingresar a Mapa</ion-button>
-    <div class="sali">
-        <ion-button color="medium" fill="outline" routerLink="/tabs/tab3">
+    <ion-button (click)="OnSubmittab1()" color="secondary" expand="block">Ingresar a Mapa</ion-button>
+    <div class="salir">
+        <ion-button color="medium" fill="outline" routerLink="/tabs/tab1">
             Salir
         </ion-button>
     </div>
