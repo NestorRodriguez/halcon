@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService  } from '../servicios/auth.service'; // revisar esta linea
 import {Router} from '@angular/router';
 import {Storage} from '@ionic/storage';
-
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -24,7 +24,7 @@ export class Tab3Page implements OnInit {
     PASSWORD: 'PASSWORD'
   };
 
-  constructor(private authService: AuthService, public router: Router,
+  constructor(private authService: AuthService, public router: Router,geolocation: Geolocation,
               // tslint:disable-next-line: no-shadowed-variable
               private Storage: Storage
     ) {
