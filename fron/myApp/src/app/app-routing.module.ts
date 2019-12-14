@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'mapa', loadChildren: './mapa/mapa.module#MapaPageModule' },
   { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule'},  { path: 'home2', loadChildren: './home2/home2.module#Home2PageModule' },
+  { path: 'croud', loadChildren: './croud/croud.module#CroudPageModule' },
 
 
 
