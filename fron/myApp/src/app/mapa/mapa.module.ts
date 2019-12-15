@@ -22,7 +22,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     IonicModule,
     RouterModule.forChild([{ path: '', component: MapaPage }]),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB2g5cFRZ6Cr6ozLb9hv6kow_Id066HQmo'
+      apiKey: 'AIzaSyB-WXfwBZru8I7Z5LqCCdigENxbBloMUZ4'
     })
   ],
   providers: [

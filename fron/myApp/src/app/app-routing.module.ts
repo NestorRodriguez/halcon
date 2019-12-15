@@ -5,9 +5,11 @@ const routes: Routes = [
   {path: '', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)},
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'mapa', loadChildren: './mapa/mapa.module#MapaPageModule' },
-  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule'},  { path: 'home2', loadChildren: './home2/home2.module#Home2PageModule' },
+  { path: 'registro', loadChildren: './registro/registro.module#RegistroPageModule'},
+  { path: 'home2', loadChildren: './home2/home2.module#Home2PageModule' },
   { path: 'croud', loadChildren: './croud/croud.module#CroudPageModule' },
-
+  { path: 'details/:id', loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule' },
+   {path:'details', loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule' }
 
 
 ];

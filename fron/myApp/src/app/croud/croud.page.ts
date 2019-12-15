@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {TaskI}from '../models/task.interface';
+import {AuthService} from '../servicios/auth.service/';
 
 @Component({
   selector: 'app-croud',
