@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TaskI}from '../models/task.interface';
-import {AuthService} from '../servicios/auth.service/';
+//import {AuthService} from '../servicios/auth.service/';  preguntar esta importacion que me saca error
 
 @Component({
   selector: 'app-croud',

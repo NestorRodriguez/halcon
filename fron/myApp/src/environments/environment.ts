@@ -7,7 +7,7 @@ export const environment = {
 };
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDivH7R1pRnbEzd4JWwBlKluU1KNHFEq3I',
+  apiKey: 'AIzaSyB-WXfwBZru8I7Z5LqCCdigENxbBloMUZ4',
   authDomain: 'halcon-2.firebaseapp.com',
   databaseURL: 'https://halcon-2.firebaseio.com',
   projectId: 'halcon-2',

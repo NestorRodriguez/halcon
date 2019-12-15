@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {environment } from '../environments/environment';  // revisar esta linea
+import {environment, firebaseConfig } from '../environments/environment';  // revisar esta linea
 import { AngularFireModule } from '@angular/fire';
 
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -26,7 +26,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
   entryComponents: [],
   imports: [
     BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-  AngularFireModule.initializeApp(environment), AngularFirestoreModule,
+  AngularFireModule.initializeApp(firebaseConfig), AngularFirestoreModule,
   AngularFireAuthModule,
   IonicStorageModule.forRoot({
     // USER : 'nestor@inger.com',
@@ -36,6 +36,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 ],
   providers: [
     StatusBar,
+    Geolocation,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
